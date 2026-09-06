@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Publication refreshed after route recovery. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080a08" />
+    <meta
+      name="description"
+      content="Portfolio de Peter Castro : recherche en sciences sociales, bande dessinée et création plastique construites par couches."
+    />
+    <title>Peter Castro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#home" data-route="home" aria-label="Peter Castro — accueil" data-i18n-aria="homeLabel">
+        <span>Peter Castro</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Navigation principale" data-i18n-aria="navLabel">
+        <a href="#research" data-route="research" data-i18n="navResearch">Enquêter</a>
+        <a href="#create" data-route="create" data-i18n="navCreations">Créer</a>
+        <a href="#workshop" data-route="workshop" data-i18n="navWorkshop">Faire atelier</a>
+        <a href="#about" data-route="about" data-i18n="navAbout">Parcours</a>
+      </nav>
+
+      <div class="language-switcher" aria-label="Langue" data-i18n-aria="languageLabel">
+        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" data-space="home" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="kicker" data-i18n="role">Anthropologue · artiste · chercheur</p>
+          <h1 id="hero-title">
+            <span data-i18n="heroLine1">Dessiner</span>
+            <span class="petrol" data-i18n="heroLine2">les traces</span>
+            <span data-i18n="heroLine3">de l’enquête,</span>
+            <span class="oxide" data-i18n="heroLine4">couche après couche.</span>
+          </h1>
+          <p class="hero-intro" data-i18n="heroIntro">
+            Je travaille à partir des traces que l’enquête laisse dans les corps, la mémoire et les
+            images. La bande dessinée permet d’en suivre les couches et de remettre leur fabrication
+            en discussion.
+          </p>
+          <div class="hero-facts" aria-label="Repères" data-i18n-aria="factsLabel">
+            <span data-i18n="based">Paris</span>
+            <span data-i18n="territories">Colombie · Mexique · France</span>
+            <span data-i18n="yearFocus">Recherche-création · 2026</span>
+          </div>
+
+        </div>
+
+        <figure class="hero-art reveal">
+          <button
+            class="art-button"
+            type="button"
+            data-lightbox="./assets/drawing-worlds-criton.webp"
+            data-caption-key="heroCaption"
+            aria-label="Agrandir l’œuvre Faire de la bande dessinée une langue de recherche"
+            data-i18n-aria="openHero"
+          >
+            <img
+              src="./assets/drawing-worlds-criton.webp"
+              alt="Enfant dessinant un monde peuplé de figures et de formes, réinterprété par Peter Castro à partir d’un dessin de Critón"
+              data-alt="altHero"
+              fetchpriority="high"
+            />
+          </button>
+          <figcaption>
+            <span data-i18n="heroCaption">Dessiner des mondes · d’après un dessin de Critón</span>
+            <span data-i18n="heroYear">2026</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="site-plan section-shell" data-space="home" aria-labelledby="site-plan-title">
+        <div class="site-plan-intro reveal">
+          <p class="bridge-kicker" data-i18n="sitePlanKicker">Introduction · mode d’emploi</p>
+          <h2 id="site-plan-title" data-i18n="sitePlanTitle">Un site, trois pratiques.</h2>
+          <p data-i18n="sitePlanText">Ce portfolio distingue trois manières de travailler. Enquêter réunit les sciences sociales et la méthode dessinée. Créer présente une pratique artistique personnelle et autonome. Faire atelier rassemble les expériences produites avec d’autres personnes. Les trois espaces se répondent sans se confondre.</p>
+        </div>
+        <nav class="site-plan-index" aria-label="Plan du portfolio" data-i18n-aria="sitePlanLabel">
+          <a href="#research" data-route="research" class="site-plan-card site-plan-research reveal">
+            <span data-i18n="partOneLabel">PARTIE I</span>
+            <strong data-i18n="pathResearch">Enquêter</strong>
+            <p data-i18n="pathResearchText">Comprendre des situations par l’anthropologie, le terrain et le dessin.</p>
+            <i aria-hidden="true">↗</i>
+          </a>
+          <a href="#create" data-route="create" class="site-plan-card site-plan-create reveal">
+            <span data-i18n="partTwoLabel">PARTIE II</span>
+            <strong data-i18n="pathCreations">Créer</strong>
+            <p data-i18n="pathCreationsText">Explorer des formes, des matières et des mondes personnels.</p>
+            <i aria-hidden="true">↗</i>
+          </a>
+          <a href="#workshop" data-route="workshop" class="site-plan-card site-plan-workshop reveal">
+            <span data-i18n="partThreeLabel">PARTIE III</span>
+            <strong data-i18n="pathWorkshop">Faire atelier</strong>
+            <p data-i18n="pathWorkshopText">Produire des images et des savoirs dans la relation avec d’autres.</p>
+            <i aria-hidden="true">↗</i>
+          </a>
+        </nav>
+      </section>
+
+      <section class="palimpsest-bridge section-shell" data-space="home" aria-labelledby="palimpsest-bridge-title">
+        <p class="bridge-index" aria-hidden="true" data-i18n="traceLabel">TRACE 01—∞</p>
+        <div class="bridge-copy reveal">
+          <p class="bridge-kicker" data-i18n="palimpsestKicker">Fil conducteur</p>
+          <h2 id="palimpsest-bridge-title" data-i18n="palimpsestStatement">
+            Voir les couches, puis revenir vers l’origine de la trace.
+          </h2>
+          <p data-i18n="palimpsestBody">
+            Mes recherches et mes images partent du même geste : reprendre une scène sans effacer
+            ses états précédents. Le dessin conserve les écarts, les corrections et les regards qui
+            ont transformé ce que l’on croyait avoir vu.
+          </p>
+        </div>
+        <p class="bridge-words" data-i18n="palimpsestWords">corps · mémoire · reprise · retour</p>
+      </section>
+
+      <section class="work-intro section-shell space-opening" id="recherche" data-space="research" aria-labelledby="works-title">
+        <header class="section-heading reveal">
+          <p class="section-number">01</p>
+          <div>
+            <p class="space-part" data-i18n="researchPart">Partie I</p>
+            <h2 id="works-title" data-i18n="worksTitle">Enquêter</h2>
+            <p data-i18n="worksIntro">
+              Dans une recherche achevée, on voit surtout un résultat cohérent. Je m’intéresse aux
+              brouillons : aux moments où la compréhension vacille et doit être reprise.
+            </p>
+          </div>
+        </header>
+      </section>
+
+      <nav class="research-toc section-shell" data-space="research" aria-label="Sommaire de la recherche" data-i18n-aria="researchTocLabel">
+        <p class="research-toc-kicker" data-i18n="researchTocKicker">Dans cette partie</p>
+        <ol>
+          <li><a href="#research-genesis"><span>I.A</span><strong data-i18n="researchTocGenesis">La genèse</strong><small data-i18n="researchTocGenesisText">Comment le dessin est entré dans l’enquête.</small></a></li>
+          <li><a href="#methode"><span>I.B</span><strong data-i18n="researchTocMethod">Les opérations</strong><small data-i18n="researchTocMethodText">Ce que la bande dessinée rend possible.</small></a></li>
+          <li><a href="#research-cases"><span>I.C</span><strong data-i18n="researchTocCases">Les rencontres</strong><small data-i18n="researchTocCasesText">Comment les cas ont transformé la méthode.</small></a></li>
+          <li><a href="#research-projects"><span>I.D</span><strong data-i18n="researchTocProjects">Les projets</strong><small data-i18n="researchTocProjectsText">Trois étapes d’une recherche en cours.</small></a></li>
+        </ol>
+      </nav>
+
+      <section class="research-genesis section-shell" id="research-genesis" data-space="research" aria-labelledby="genesis-title">
+        <header class="narrative-heading reveal">
+          <p class="section-number">I.A</p>
+          <div>
+            <p class="space-part" data-i18n="genesisKicker">Genèse d’une pratique</p>
+            <h2 id="genesis-title" data-i18n="genesisTitle">Comment le dessin est entré dans l’enquête</h2>
+            <p data-i18n="genesisIntro">Je n’ai pas commencé par inventer une méthode. Le dessin est devenu un outil d’enquête à travers une suite d’expériences.</p>
+          </div>
+        </header>
+
+        <ol class="genesis-timeline">
+          <li class="reveal">
+            <span>01</span>
+            <div><h3 data-i18n="genesis1Title">Avant la méthode</h3><p data-i18n="genesis1Text">Le dessin était déjà une pratique personnelle et expérimentale, avant les sciences sociales.</p></div>
+          </li>
+          <li class="reveal">
+            <span>02</span>
+            <div><h3 data-i18n="genesis2Title">Dessiner le terrain</h3><p data-i18n="genesis2Text">En Amazonie colombienne, croquis et aquarelles m’ont appris à ralentir et à regarder autrement.</p></div>
+          </li>
+          <li class="reveal">
+            <span>03</span>
+            <div><h3 data-i18n="genesis3Title">Un terrain interrompu</h3><p data-i18n="genesis3Text">La pandémie a interrompu le terrain. Les images m’ont permis de revenir vers une expérience encore sans forme.</p></div>
+          </li>
+          <li class="reveal">
+            <span>04</span>
+            <div><h3 data-i18n="genesis4Title">Revenir par la bande dessinée</h3><p data-i18n="genesis4Text">À l’IHEAL, les ateliers de Romain Dutter ont conduit à dix-neuf pages sur mon arrivée en Amazonie.</p></div>
+          </li>
+          <li class="reveal">
+            <span>05</span>
+            <div><h3 data-i18n="genesis5Title">Diana renvoie le regard</h3><p data-i18n="genesis5Text">En reprenant la scène avec Diana Gil Bora, la question s’est inversée : que voient les autres du chercheur ?</p></div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="research-projects-heading section-shell" id="research-projects" data-space="research" aria-labelledby="research-projects-title">
+        <p class="section-number">I.D</p>
+        <div class="reveal">
+          <p class="space-part" data-i18n="researchProjectsKicker">Projets de recherche</p>
+          <h2 id="research-projects-title" data-i18n="researchProjectsTitle">Projets et récits dessinés</h2>
+          <p data-i18n="researchProjectsText">Chaque projet apparaît d’abord sous forme de résumé. Ouvrez-le pour parcourir ses images, ses versions et ses choix méthodologiques.</p>
+        </div>
+      </section>
+
+      <article class="project project-featured route-expandable" data-space="research" aria-labelledby="project-trouble">
+        <div class="project-info section-shell reveal">
+          <div class="project-count">03</div>
+          <div class="project-copy">
+            <p class="project-meta" data-i18n="troubleMeta">Projet doctoral · EHESS · 2026</p>
+            <h3 id="project-trouble" data-i18n="troubleTitle">Trouble dans l’enquête</h3>
+            <p class="project-subtitle" data-i18n="troubleSubtitle">
+              Suivre ce que devient une scène lorsqu’elle est racontée, dessinée, retournée et reprise.
+            </p>
+            <p data-i18n="troubleText">
+              Ce projet doctoral prolonge les apprentissages du mémoire. Les scènes de trouble y servent
+              de portes d’entrée empiriques : la bande dessinée permet de suivre leurs interprétations
+              successives, de les faire circuler et d’observer ce que les retours transforment.
+            </p>
+          </div>
+          <aside class="project-note">
+            <p data-i18n="troubleNoteLabel">Question actuelle</p>
+            <blockquote data-i18n="troubleQuestion">
+              Que devient une interprétation lorsqu’elle peut être dessinée, discutée, corrigée, refusée ou laissée ouverte ?
+            </blockquote>
+          </aside>
+        </div>
+
+        <div class="diptych reveal">
+          <figure>
+            <button class="art-button" type="button" data-lightbox="./assets/trouble-enquete-planche-01.webp" data-caption-key="troubleImage1Caption" aria-label="Agrandir la première planche de Trouble dans l’enquête" data-i18n-aria="openTrouble1">
+              <img src="./assets/trouble-enquete-planche-01.webp" alt="Première planche de bande dessinée du projet doctoral Trouble dans l’enquête" data-alt="altTrouble1" loading="lazy" />
+            </button>
+            <figcaption data-i18n="troubleImage1Caption">Le terrain raconté par le chercheur</figcaption>
+          </figure>
+          <figure>
+            <button class="art-button" type="button" data-lightbox="./assets/trouble-enquete-planche-02.webp" data-caption-key="troubleImage2Caption" aria-label="Agrandir la deuxième planche de Trouble dans l’enquête" data-i18n-aria="openTrouble2">
+              <img src="./assets/trouble-enquete-planche-02.webp" alt="Deuxième planche montrant des interprétations concurrentes d’une situation de terrain" data-alt="altTrouble2" loading="lazy" />
+            </button>
+            <figcaption data-i18n="troubleImage2Caption">Le terrain renvoyé vers l’enquêteur</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="project section-shell route-expandable" data-space="about" aria-labelledby="project-imposteur">
+        <div class="project-info reveal">
+          <div class="project-count" data-i18n="journeyLabel">PARCOURS</div>
+          <div class="project-copy">
+            <p class="project-meta" data-i18n="imposteurMeta">L’Imposteur · revue doctorale · 2025</p>
+            <h3 id="project-imposteur" data-i18n="imposteurTitle">Entrer en thèse dans une autre langue</h3>
+            <p data-i18n="imposteurText">
+              Deux planches autobiographiques reviennent sur mon arrivée en France et sur le double travail
+              imposé par la langue académique : penser en espagnol, reformuler en français, puis affronter
+              l’orthographe comme critère de légitimité. La bande dessinée y apparaît à la fois comme langage
+              scientifique et comme manière d’ouvrir une méthode propre.
+            </p>
+          </div>
+          <aside class="project-note project-note-ink">
+            <p data-i18n="imposteurNoteLabel">Peur d’entrée en thèse</p>
+            <blockquote data-i18n="imposteurNote">Isolement, précarité matérielle et perte des liens sociaux.</blockquote>
+          </aside>
+        </div>
+
+        <div class="gallery gallery-imposteur reveal">
+          <figure>
+            <button class="art-button" type="button" data-lightbox="./assets/l-imposteur-01.webp" data-caption-key="imposteurCaption1" aria-label="Agrandir la première planche publiée dans L’Imposteur" data-i18n-aria="openImposteur1">
+              <img src="./assets/l-imposteur-01.webp" alt="Planche autobiographique sur l’arrivée à Toulouse et les difficultés avec la langue académique française" data-alt="altImposteur1" loading="lazy" />
+            </button>
+            <figcaption data-i18n="imposteurCaption1">Arrivée en France et langue académique</figcaption>
+          </figure>
+          <figure>
+            <button class="art-button" type="button" data-lightbox="./assets/l-imposteur-02.webp" data-caption-key="imposteurCaption2" aria-label="Agrandir la deuxième planche publiée dans L’Imposteur" data-i18n-aria="openImposteur2">
+              <img src="./assets/l-imposteur-02.webp" alt="Planche autobiographique sur la découverte de la bande dessinée comme langage scientifique" data-alt="altImposteur2" loading="lazy" />
+            </button>
+            <figcaption data-i18n="imposteurCaption2">La bande dessinée comme ouverture méthodologique</figcaption>
+          </figure>
+          <figure class="gallery-wide">
+            <button class="art-button" type="button" data-lightbox="./assets/l-imposteur-peur.webp" data-caption-key="imposteurCaption3" aria-label="Agrandir l’illustration sur la peur d’entrée en thèse" data-i18n-aria="openImposteur3">
+              <img src="./assets/l-imposteur-peur.webp" alt="Personnage isolé dans un cercle de lumière, entouré de silhouettes et de piles de livres" data-alt="altImposteur3" loading="lazy" />
+            </button>
+            <figcaption data-i18n="imposteurCaption3">La plus grande peur à l’entrée en thèse</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="project section-shell route-expandable" data-space="research" aria-labelledby="project-observer">
+        <div class="project-info reveal">
+          <div class="project-count">01</div>
+          <div class="project-copy">
+            <p class="project-meta" data-i18n="observerMeta">Mémoire de Master 2 · IHEAL · 2024</p>
+            <h3 id="project-observer" data-i18n="observerTitle">Observer et être observé</h3>
+            <p data-i18n="observerText">
+              Une socio-anthropologie des anthropologues par la bande dessinée. L’enquête examine
+              comment les expériences de terrain, les positions sociales et les relations avec les interlocuteurs
+              transforment la pratique scientifique — et comment le chercheur est, lui aussi, observé et interprété.
+            </p>
+          </div>
+          <aside class="result-stamp">
+            <span data-i18n="masterResult">Mémoire : 17/20</span>
+            <span data-i18n="masterMention">Mention Très Bien</span>
+          </aside>
+        </div>
+
+        <div class="gallery gallery-observer reveal">
+          <figure class="gallery-wide">
+            <button class="art-button" type="button" data-lightbox="./assets/observer-et-etre-observe.webp" data-caption-key="observerCaption1" aria-label="Agrandir Observer et être observé" data-i18n-aria="openObserver1">
+              <img src="./assets/observer-et-etre-observe.webp" alt="Deux personnes assises autour d’une table, chacune projetant une représentation différente du terrain" data-alt="altObserver1" loading="lazy" />
+            </button>
+            <figcaption data-i18n="observerCaption1">La relation d’enquête comme construction réciproque</figcaption>
+          </figure>
+          <figure>
+            <button class="art-button" type="button" data-lightbox="./assets/bd-methode-enquete.webp" data-caption-key="observerCaption2" aria-label="Agrandir les dessins de la méthode d’enquête" data-i18n-aria="openObserver2">
+              <img src="./assets/bd-methode-enquete.webp" alt="Assemblage de dessins montrant les étapes de production d’une bande dessinée à partir d’entretiens" data-alt="altObserver2" loading="lazy" />
+            </button>
+            <figcaption data-i18n="observerCaption2">La bande dessinée comme méthode d’enquête</figcaption>
+          </figure>
+          <figure>
+            <button class="art-button" type="button" data-lightbox="./assets/stephanie-processus.webp" data-caption-key="observerCaption3" aria-label="Agrandir le processus de Stéphanie" data-i18n-aria="openObserver3">
+              <img src="./assets/stephanie-processus.webp" alt="Portrait, éléments d’entretien et storyboard autour de l’expérience de Stéphanie" data-alt="altObserver3" loading="lazy" />
+            </button>
+            <figcaption data-i18n="observerCaption3">De l’entretien à la planche : le cas de Stéphanie</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="project project-dark section-shell project-palimpsest route-expandable" data-space="research" aria-labelledby="project-palimpseste">
+        <div class="project-info reveal">
+          <div class="project-count">02</div>
+          <div class="project-copy">
+            <p class="project-meta" data-i18n="palimpsesteMeta">Bande dessinée de terrain · 2022–en cours</p>
+            <h3 id="project-palimpseste" data-i18n="palimpsesteTitle">Trajet du corps palimpseste</h3>
+            <p class="project-subtitle" data-i18n="palimpsesteSubtitle">
+              Une trajectoire entre Kennedy, la France et l’Amazonie, réécrite depuis la relation d’enquête.
+            </p>
+            <p data-i18n="palimpsesteText">
+              À partir de mon travail de terrain et des échanges avec Diana Gil Bora, la bande dessinée
+              reconstruit les conditions qui m’ont conduit jusqu’à l’Amazonie colombienne. Elle ne raconte
+              pas seulement un déplacement géographique : elle suit les souvenirs, les assignations et les
+              malentendus qui se déposent dans le corps du chercheur et transforment sa manière de voir.
+            </p>
+          </div>
+          <aside class="palimpsest-axis">
+            <p data-i18n="palimpsesteAxisLabel">Trajet visible</p>
+            <strong data-i18n="palimpsesteAxis">Kennedy → France → Amazonie → retour sur l’enquête</strong>
+          </aside>
+        </div>
+
+        <div class="edition-heading reveal">
+          <p class="edition-kicker" data-i18n="v3Kicker">Version 3 · réécriture actuelle</p>
+          <h4 data-i18n="v3Title">La scène avant son explication</h4>
+          <p data-i18n="v3Intro">
+            Le feu, la maloca, le mambe et les silences introduisent d’abord la situation. Le parcours
+            autobiographique arrive ensuite : l’interprétation naît dans les images avant d’être formulée.
+          </p>
+        </div>
+
+        <div class="edition-gallery reveal" aria-label="Cinq pages de la version 3" data-i18n-aria="v3GalleryLabel">
+          <figure>
+            <button class="art-button" type="button" data-lightbox="./assets/palimpseste-v3-01.webp" data-caption-key="v3Caption1" aria-label="Agrandir la première page de la version 3" data-i18n-aria="openV3P1">
+              <img src="./assets/palimpseste-v3-01.webp" alt="Séquence nocturne montrant le feu, la maloca, le chercheur et une cuillerée de mambe" data-alt="altV3P1" loading="lazy" />
+            </button>
+            <figcaption><span>V3—01</span><span data-i18n="v3Caption1">Entrer dans la scène</span></figcaption>
+          </figure>
+          <figure>
+            <button class="art-button" type="button" data-lightbox="./assets/palimpseste-v3-02.webp" data-caption-key="v3Caption2" aria-label="Agrandir la deuxième page de la version 3" data-i18n-aria="openV3P2">
+              <img src="./assets/palimpseste-v3-02.webp" alt="Conversation dans la maloca sur l’Église, les pauvres et le péché écologique" data-alt="altV3P2" loading="lazy" />
+            </button>
+            <figcaption><span>V3—02</span><span data-i18n="v3Caption2">Une certitude commence à vaciller</span></figcaption>
+          </figure>
+          <figure>
+            <button class="art-button" type="button" data-lightbox="./assets/palimpseste-v3-03.webp" data-caption-key="v3Caption3" aria-label="Agrandir la troisième page de la version 3" data-i18n-aria="openV3P3">
+              <img src="./assets/palimpseste-v3-03.webp" alt="Dialogue où le chercheur s’étonne qu’un prêtre prenne du mambe" data-alt="altV3P3" loading="lazy" />
+            </button>
+            <figcaption><span>V3—03</span><span data-i18n="v3Caption3">Le malentendu prend corps</span></figcaption>
+          </figure>
+          <figure>
+            <button class="art-button" type="button" data-lightbox="./assets/palimpseste-v3-04.webp" data-caption-key="v3Caption4" aria-label="Agrandir la quatrième page de la version 3" data-i18n-aria="openV3P4">
+              <img src="./assets/palimpseste-v3-04.webp" alt="Le chercheur assis sous un arbre immense au bord de l’eau en Amazonie" data-alt="altV3P4" loading="lazy" />
+            </button>
+            <figcaption><span>V3—04</span><span data-i18n="v3Caption4">Le corps dans l’échelle du territoire</span></figcaption>
+          </figure>
+          <figure>
+            <button class="art-button" type="button" data-lightbox="./assets/palimpseste-v3-05.webp" data-caption-key="v3Caption5" aria-label="Agrandir la cinquième page de la version 3" data-i18n-aria="openV3P5">
+              <img src="./assets/palimpseste-v3-05.webp" alt="Cartes de la Colombie, Bogotá et Kennedy menant à un souvenir d’enfance à Casablanca" data-alt="altV3P5" loading="lazy" />
+            </button>
+            <figcaption><span>V3—05</span><span data-i18n="v3Caption5">Revenir à Kennedy, origine de la trace</span></figcaption>
+          </figure>
+        </div>
+
+        <section class="version-layers reveal" aria-labelledby="version-layers-title">
+          <header class="layers-heading">
+            <p class="edition-kicker" data-i18n="layersKicker">Palimpseste de fabrication</p>
+            <h4 id="version-layers-title" data-i18n="layersTitle">Ce que la réécriture déplace</h4>
+            <p data-i18n="layersIntro">
+              La première version de 2022 n’est pas exposée comme une seconde œuvre complète. Quatre
+              confrontations précises montrent plutôt comment le point de vue, le corps et l’échelle du
+              récit ont changé. Ouvrez chaque strate pour voir les deux états.
+            </p>
+          </header>
+
+          <div class="layer-cases">
+            <details class="layer-case" open>
+              <summary>
+                <span class="layer-number">01</span>
+                <strong data-i18n="layer1Title">Du surplomb à la présence</strong>
+                <span>V1 ↔ V3</span>
+              </summary>
+              <div class="layer-case-body">
+                <p data-i18n="layer1Text">
+                  En 2022, la scène était observée depuis le haut. Dans la version 3, mon visage et mon
+                  arrivée s’intercalent entre la maloca et le mambe : l’enquêteur n’est plus hors champ.
+                </p>
+                <div class="layer-pair">
+                  <figure>
+                    <button class="art-button" type="button" data-lightbox="./assets/palimpseste-v1-01.webp" data-caption-key="layerV1Caption" aria-label="Agrandir la première page de 2022" data-i18n-aria="openV1P1">
+                      <img src="./assets/palimpseste-v1-01.webp" alt="Première version de 2022 observant la maloca depuis le haut" data-alt="altV1P1" loading="lazy" />
+                    </button>
+                    <figcaption data-i18n="layerV1Caption">V1 · première formulation · 2022</figcaption>
+                  </figure>
+                  <figure>
+                    <button class="art-button" type="button" data-lightbox="./assets/palimpseste-v3-01.webp" data-caption-key="layerV3Caption" aria-label="Agrandir la première page réécrite" data-i18n-aria="openV3P1">
+                      <img src="./assets/palimpseste-v3-01.webp" alt="Séquence nocturne montrant le feu, la maloca, le chercheur et une cuillerée de mambe" data-alt="altV3P1" loading="lazy" />
+                    </button>
+                    <figcaption data-i18n="layerV3Caption">V3 · réécriture actuelle · 2026</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </details>
+
+            <details class="layer-case">
+              <summary>
+                <span class="layer-number">02</span>
+                <strong data-i18n="layer2Title">Du dialogue au trouble relationnel</strong>
+                <span>V1 ↔ V3</span>
+              </summary>
+              <div class="layer-case-body">
+                <p data-i18n="layer2Text">
+                  Les paroles restent proches, mais les regards, les distances et la durée accordée aux gestes
+                  rendent désormais visible la surprise du chercheur et la réponse de son interlocuteur.
+                </p>
+                <div class="layer-pair">
+                  <figure>
+                    <button class="art-button" type="button" data-lightbox="./assets/palimpseste-v1-03.webp" data-caption-key="layerV1Caption" aria-label="Agrandir la troisième page de 2022" data-i18n-aria="openV1P3">
+                      <img src="./assets/palimpseste-v1-03.webp" alt="Première version du dialogue sur le mambe, la prêtrise et l’Église" data-alt="altV1P3" loading="lazy" />
+                    </button>
+                    <figcaption data-i18n="layerV1Caption">V1 · première formulation · 2022</figcaption>
+                  </figure>
+                  <figure>
+                    <button class="art-button" type="button" data-lightbox="./assets/palimpseste-v3-03.webp" data-caption-key="layerV3Caption" aria-label="Agrandir la troisième page réécrite" data-i18n-aria="openV3P3">
+                      <img src="./assets/palimpseste-v3-03.webp" alt="Dialogue où le chercheur s’étonne qu’un prêtre prenne du mambe" data-alt="altV3P3" loading="lazy" />
+                    </button>
+                    <figcaption data-i18n="layerV3Caption">V3 · réécriture actuelle · 2026</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </details>
+
+            <details class="layer-case">
+              <summary>
+                <span class="layer-number">03</span>
+                <strong data-i18n="layer3Title">Du symbole au corps situé</strong>
+                <span>V1 ↔ V3</span>
+              </summary>
+              <div class="layer-case-body">
+                <p data-i18n="layer3Text">
+                  La flamme abstraite de la première version devient un corps minuscule sous un arbre immense.
+                  La trajectoire n’est plus seulement racontée : elle acquiert une échelle, un poids et un lieu.
+                </p>
+                <div class="layer-pair">
+                  <figure>
+                    <button class="art-button" type="button" data-lightbox="./assets/palimpseste-v1-04.webp" data-caption-key="layerV1Caption" aria-label="Agrandir la quatrième page de 2022" data-i18n-aria="openV1P4">
+                      <img src="./assets/palimpseste-v1-04.webp" alt="Première version associant la trajectoire France-Amazonie à une grande flamme" data-alt="altV1P4" loading="lazy" />
+                    </button>
+                    <figcaption data-i18n="layerV1Caption">V1 · première formulation · 2022</figcaption>
+                  </figure>
+                  <figure>
+                    <button class="art-button" type="button" data-lightbox="./assets/palimpseste-v3-04.webp" data-caption-key="layerV3Caption" aria-label="Agrandir la quatrième page réécrite" data-i18n-aria="openV3P4">
+                      <img src="./assets/palimpseste-v3-04.webp" alt="Le chercheur assis sous un arbre immense au bord de l’eau en Amazonie" data-alt="altV3P4" loading="lazy" />
+                    </button>
+                    <figcaption data-i18n="layerV3Caption">V3 · réécriture actuelle · 2026</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </details>
+
+            <details class="layer-case">
+              <summary>
+                <span class="layer-number">04</span>
+                <strong data-i18n="layer4Title">Du souvenir à l’échelle du territoire</strong>
+                <span>V1 ↔ V3</span>
+              </summary>
+              <div class="layer-case-body">
+                <p data-i18n="layer4Text">
+                  Le souvenir domestique s’ouvre désormais par emboîtements : Colombie, Bogotá, Kennedy,
+                  Casablanca, puis l’appartement. Revenir à l’origine signifie traverser plusieurs couches
+                  d’espace et de mémoire.
+                </p>
+                <div class="layer-pair">
+                  <figure>
+                    <button class="art-button" type="button" data-lightbox="./assets/palimpseste-v1-05.webp" data-caption-key="layerV1Caption" aria-label="Agrandir la cinquième page de 2022" data-i18n-aria="openV1P5">
+                      <img src="./assets/palimpseste-v1-05.webp" alt="Première version ouvrant le souvenir d’enfance à Casablanca par une vue de Bogotá" data-alt="altV1P5" loading="lazy" />
+                    </button>
+                    <figcaption data-i18n="layerV1Caption">V1 · première formulation · 2022</figcaption>
+                  </figure>
+                  <figure>
+                    <button class="art-button" type="button" data-lightbox="./assets/palimpseste-v3-05.webp" data-caption-key="layerV3Caption" aria-label="Agrandir la cinquième page réécrite" data-i18n-aria="openV3P5">
+                      <img src="./assets/palimpseste-v3-05.webp" alt="Cartes de la Colombie, Bogotá et Kennedy menant à un souvenir d’enfance à Casablanca" data-alt="altV3P5" loading="lazy" />
+                    </button>
+                    <figcaption data-i18n="layerV3Caption">V3 · réécriture actuelle · 2026</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </details>
+          </div>
+        </section>
+      </article>
+
+      <article class="project section-shell route-expandable" data-space="create" aria-labelledby="project-mama">
+        <div class="project-info reveal">
+          <div class="project-count" data-i18n="storyLabel">RÉCIT</div>
+          <div class="project-copy">
+            <p class="project-meta" data-i18n="mamaMeta">Récit dessiné familial · 2022</p>
+            <h3 id="project-mama" data-i18n="mamaTitle">Où est ta maman&nbsp;?</h3>
+            <p data-i18n="mamaText">
+              Un récit personnel du côté maternel, traversé par la mémoire, l’absence et les silences transmis
+              entre générations. L’image y fait revenir ce qui n’a pas été raconté et compose avec les vides
+              laissés dans l’histoire familiale.
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery gallery-mama reveal">
+          <figure>
+            <button class="art-button" type="button" data-lightbox="./assets/ou-est-ta-maman-01.webp" data-caption-key="mamaCaption" aria-label="Agrandir Où est ta maman" data-i18n-aria="openMama1">
+              <img src="./assets/ou-est-ta-maman-01.webp" alt="Page en noir et blanc sur l’absence de la mère, les souvenirs et la filiation" data-alt="altMama1" loading="lazy" />
+            </button>
+            <figcaption data-i18n="mamaCaption">Où est ta maman · 2023</figcaption>
+          </figure>
+          <figure>
+            <button class="art-button" type="button" data-lightbox="./assets/ou-est-ta-maman-02.webp" data-caption-key="mamaCaption" aria-label="Agrandir la deuxième page de Où est ta maman" data-i18n-aria="openMama2">
+              <img src="./assets/ou-est-ta-maman-02.webp" alt="Page dessinée montrant la trajectoire familiale et rurale de la mère" data-alt="altMama2" loading="lazy" />
+            </button>
+            <figcaption data-i18n="mamaCaption">Où est ta maman · 2023</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <section class="work-intro section-shell space-opening" data-space="workshop" aria-labelledby="workshop-title">
+        <header class="section-heading reveal">
+          <p class="section-number">03</p>
+          <div>
+            <p class="space-part" data-i18n="workshopPart">Partie III</p>
+            <h2 id="workshop-title" data-i18n="workshopTitle">Faire atelier</h2>
+            <p data-i18n="workshopIntro">Un atelier n’est pas seulement un lieu où transmettre une technique. C’est une situation où des personnes dessinent, interprètent et transforment ensemble ce qui peut être su, raconté ou partagé.</p>
+          </div>
+        </header>
+      </section>
+
+      <section class="workshop-process section-shell" data-space="workshop" aria-labelledby="workshop-process-title">
+        <div class="workshop-process-intro reveal">
+          <p class="section-number">III.A</p>
+          <div>
+            <p class="space-part" data-i18n="workshopProcessKicker">Une pratique de relation</p>
+            <h2 id="workshop-process-title" data-i18n="workshopProcessTitle">L’atelier fabrique un espace commun.</h2>
+            <p data-i18n="workshopProcessIntro">Je ne viens pas avec une image déjà décidée. Le cadre se construit à partir de ce que les personnes apportent, des formes qu’elles essaient et des désaccords qui apparaissent.</p>
+          </div>
+        </div>
+        <ol class="workshop-steps reveal">
+          <li><span>01</span><h3 data-i18n="workshopStep1Title">Mettre en situation</h3><p data-i18n="workshopStep1Text">Partir d’un récit, d’une difficulté ou d’une expérience partageable.</p></li>
+          <li><span>02</span><h3 data-i18n="workshopStep2Title">Fabriquer ensemble</h3><p data-i18n="workshopStep2Text">Dessiner, découper, monter et comparer sans imposer une seule manière de faire.</p></li>
+          <li><span>03</span><h3 data-i18n="workshopStep3Title">Faire circuler</h3><p data-i18n="workshopStep3Text">Transformer les essais en fanzine, affiche, exposition ou objet de discussion.</p></li>
+        </ol>
+      </section>
+
+      <article class="project section-shell" data-space="workshop" aria-labelledby="project-galere">
+        <div class="project-info reveal">
+          <div class="project-count">01</div>
+          <div class="project-copy">
+            <p class="project-meta" data-i18n="galereMeta">Collectif de recherche-création · 2025–2026</p>
+            <h3 id="project-galere">La Galère</h3>
+            <p data-i18n="galereText">
+              Collectif cofondé autour de la bande dessinée et des sciences sociales. Ateliers,
+              fanzines et affiches transforment les difficultés partagées de la recherche en matière
+              de création, de médiation et de discussion collective.
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery gallery-galere reveal">
+          <figure>
+            <button class="art-button" type="button" data-lightbox="./assets/la-galere-bd.webp" data-caption-key="galereCaption1" aria-label="Agrandir une bande dessinée de La Galère" data-i18n-aria="openGalere1">
+              <img src="./assets/la-galere-bd.webp" alt="Bande dessinée bleu et noir sur les difficultés partagées du travail de recherche" data-alt="altGalere1" loading="lazy" />
+            </button>
+            <figcaption data-i18n="galereCaption1">Une recherche collective sur la recherche</figcaption>
+          </figure>
+          <figure>
+            <button class="art-button" type="button" data-lightbox="./assets/la-galere-affiche.webp" data-caption-key="galereCaption2" aria-label="Agrandir l’affiche de La Galère" data-i18n-aria="openGalere2">
+              <img src="./assets/la-galere-affiche.webp" alt="Aquarelle circulaire multicolore représentant les membres du collectif autour d’un centre rouge et bleu" data-alt="altGalere2" loading="lazy" />
+            </button>
+            <figcaption data-i18n="galereCaption2">Affiche pour les ateliers du collectif</figcaption>
+          </figure>
+          <figure class="gallery-wide">
+            <button class="art-button" type="button" data-lightbox="./assets/la-galere-edition.webp" data-caption-key="galereCaption3" aria-label="Agrandir les éditions de La Galère" data-i18n-aria="openGalere3">
+              <img src="./assets/la-galere-edition.webp" alt="Fanzines, affiches et pages imprimées produits par le collectif La Galère" data-alt="altGalere3" loading="lazy" />
+            </button>
+            <figcaption data-i18n="galereCaption3">La bande dessinée comme objet éditorial</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="project section-shell" data-space="create" aria-labelledby="project-reportage">
+        <div class="project-info reveal">
+          <div class="project-count" data-i18n="reportageLabel">REPORTAGE</div>
+          <div class="project-copy">
+            <p class="project-meta" data-i18n="reportMeta">Commande de reportage dessiné · ENS · 2026</p>
+            <h3 id="project-reportage" data-i18n="reportTitle">Observation et évocation</h3>
+            <p data-i18n="reportText">
+              Dessins réalisés sur le vif autour d’une pièce de théâtre à l’École normale supérieure.
+              Le trait enregistre les moments observés et évoque les présences absentes — entre écoute,
+              mémoire et traduction visuelle.
+            </p>
+          </div>
+        </div>
+
+        <div class="sketch-strip reveal">
+          <button class="art-button" type="button" data-lightbox="./assets/reportage-entree.webp" data-caption-key="reportCaption" aria-label="Agrandir le croquis de l’entrée" data-i18n-aria="openReport1">
+            <img src="./assets/reportage-entree.webp" alt="Croquis à l’encre d’un rassemblement à l’entrée d’un théâtre" data-alt="altReport1" loading="lazy" />
+          </button>
+          <button class="art-button" type="button" data-lightbox="./assets/reportage-public.webp" data-caption-key="reportCaption" aria-label="Agrandir le croquis du public" data-i18n-aria="openReport2">
+            <img src="./assets/reportage-public.webp" alt="Croquis du public observant une représentation théâtrale" data-alt="altReport2" loading="lazy" />
+          </button>
+          <button class="art-button" type="button" data-lightbox="./assets/reportage-scene.webp" data-caption-key="reportCaption" aria-label="Agrandir le croquis de la scène" data-i18n-aria="openReport3">
+            <img src="./assets/reportage-scene.webp" alt="Croquis d’une scène éclairée avec des interprètes alignés" data-alt="altReport3" loading="lazy" />
+          </button>
+          <button class="art-button" type="button" data-lightbox="./assets/reportage-mer.webp" data-caption-key="reportCaption" aria-label="Agrandir le dessin face à la mer" data-i18n-aria="openReport4">
+            <img src="./assets/reportage-mer.webp" alt="Personnage minuscule debout face à une vaste mer dessinée à l’encre" data-alt="altReport4" loading="lazy" />
+          </button>
+        </div>
+        <p class="strip-caption" data-i18n="reportCaption">Reportage dessiné : observation et évocation</p>
+      </article>
+
+      <section class="creations-intro section-shell space-opening" id="creations" data-space="create" aria-labelledby="creations-title">
+        <header class="section-heading reveal">
+          <p class="section-number">02</p>
+          <div>
+            <p class="space-part" data-i18n="createPart">Partie II</p>
+            <h2 id="creations-title" data-i18n="creationsTitle">Créer</h2>
+            <p data-i18n="creationsIntro">
+              Aquarelles, dessins, broderies, collages et carnets : cette pratique précède mon travail
+              en sciences sociales et possède sa propre histoire. Elle n’a pas besoin de devenir une
+              méthode pour exister, même si certains gestes circulent entre les deux espaces.
+            </p>
+          </div>
+        </header>
+      </section>
+
+      <section class="constellation-scene section-shell" data-space="create" aria-labelledby="constellation-title">
+        <div class="constellation-main reveal">
+          <button class="art-button" type="button" data-lightbox="./assets/via-lactea.webp" data-caption-key="viaLacteaCaption" aria-label="Agrandir Vía Láctea" data-i18n-aria="openViaLactea">
+            <img src="./assets/via-lactea.webp" alt="Aquarelle turquoise constellée de points colorés, de fragments collés et de traces de grattage" data-alt="altViaLactea" loading="lazy" />
+          </button>
+          <p class="constellation-label" data-i18n="viaLacteaCaption">Vía Láctea · aquarelle, collage et grattage sur papier · A4</p>
+        </div>
+
+        <div class="constellation-copy reveal">
+          <p class="constellation-kicker" data-i18n="constellationKicker">Aquarelles · collage · papier</p>
+          <h3 id="constellation-title" data-i18n="constellationTitle">Vía Láctea / Bóvedas celestes</h3>
+          <p data-i18n="constellationText">
+            Trois paysages intérieurs où la lumière se dépose par couches. Vía Láctea assemble pigments, fragments collés et grattage sur format A4 ; les deux Bóvedas celestes prolongent ce mouvement dans des formats plus petits, entre ciel, profondeur et foyer.
+          </p>
+
+          <div class="constellation-orbits" aria-label="Bóvedas celestes" data-i18n-aria="constellationGalleryLabel">
+            <button class="art-button constellation-orbit constellation-orbit-one" type="button" data-lightbox="./assets/bovedas-celestes-i.webp" data-caption-key="bovedasICaption" aria-label="Agrandir Bóvedas celestes I" data-i18n-aria="openBovedasI">
+              <img src="./assets/bovedas-celestes-i.webp" alt="Aquarelle de voûte céleste aux arcs jaune, orange, vert, rose et bleu" data-alt="altBovedasI" loading="lazy" />
+              <span data-i18n="bovedasICaption">Bóvedas celestes I · aquarelle sur papier</span>
+            </button>
+            <button class="art-button constellation-orbit constellation-orbit-two" type="button" data-lightbox="./assets/bovedas-celestes-ii.webp" data-caption-key="bovedasIICaption" aria-label="Agrandir Bóvedas celestes II" data-i18n-aria="openBovedasII">
+              <img src="./assets/bovedas-celestes-ii.webp" alt="Aquarelle de voûte céleste rouge, noire, bleue et turquoise autour d’un centre lumineux" data-alt="altBovedasII" loading="lazy" />
+              <span data-i18n="bovedasIICaption">Bóvedas celestes II · aquarelle sur papier</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="studio-scene section-shell" data-space="create" aria-labelledby="studio-title">
+        <div class="studio-copy reveal">
+          <p class="studio-kicker" data-i18n="studioKicker">Atelier · œuvres en cours · Paris</p>
+          <h3 id="studio-title" data-i18n="studioTitle">L’atelier comme palimpseste vivant</h3>
+          <p data-i18n="studioText">
+            Les œuvres ne restent pas isolées dans un dossier. Elles se répondent sur les murs, les
+            cordes et la table : aquarelles, papiers découpés, fils, encres et essais encore ouverts.
+            Chaque déplacement produit une nouvelle relation entre les formes.
+          </p>
+          <p class="studio-caption" data-i18n="studioCaption">
+            Accrocher, déplacer, recouvrir, reprendre : l’espace de travail garde la mémoire des gestes.
+          </p>
+        </div>
+
+        <div class="studio-collage reveal" aria-label="Œuvres et espace de travail" data-i18n-aria="studioGalleryLabel">
+          <button class="art-button studio-frame studio-frame-main" type="button" data-lightbox="./assets/atelier-vue.webp" data-caption-key="studioMark1" aria-label="Agrandir la vue de l’atelier" data-i18n-aria="openStudio1">
+            <img src="./assets/atelier-vue.webp" alt="Vue générale de l’atelier de Peter Castro avec œuvres, livres et outils" data-alt="altStudio1" loading="lazy" />
+            <span data-i18n="studioMark1">Vue d’ensemble · atelier</span>
+          </button>
+          <button class="art-button studio-frame studio-frame-cords" type="button" data-lightbox="./assets/atelier-cordes.webp" data-caption-key="studioMark2" aria-label="Agrandir les œuvres suspendues" data-i18n-aria="openStudio2">
+            <img src="./assets/atelier-cordes.webp" alt="Œuvres organiques suspendues devant une bibliothèque" data-alt="altStudio2" loading="lazy" />
+            <span data-i18n="studioMark2">Suspendre · faire dialoguer</span>
+          </button>
+          <button class="art-button studio-frame studio-frame-wall" type="button" data-lightbox="./assets/atelier-mur.webp" data-caption-key="studioMark3" aria-label="Agrandir le mur de recherches plastiques" data-i18n-aria="openStudio3">
+            <img src="./assets/atelier-mur.webp" alt="Mur couvert d’aquarelles, de papiers découpés et de formes organiques" data-alt="altStudio3" loading="lazy" />
+            <span data-i18n="studioMark3">Mur · états provisoires</span>
+          </button>
+          <button class="art-button studio-frame studio-frame-matter" type="button" data-lightbox="./assets/atelier-matiere.webp" data-caption-key="studioMark4" aria-label="Agrandir les recherches de matière" data-i18n-aria="openStudio4">
+            <img src="./assets/atelier-matiere.webp" alt="Aquarelle bleue, matière textile et papier suspendus dans l’atelier" data-alt="altStudio4" loading="lazy" />
+            <span data-i18n="studioMark4">Matière · eau · fil</span>
+          </button>
+          <button class="art-button studio-frame studio-frame-table" type="button" data-lightbox="./assets/atelier-table.webp" data-caption-key="studioMark5" aria-label="Agrandir la table de travail" data-i18n-aria="openStudio5">
+            <img src="./assets/atelier-table.webp" alt="Table de travail avec aquarelles, pinceaux et petites peintures" data-alt="altStudio5" loading="lazy" />
+            <span data-i18n="studioMark5">Table · couleurs en mouvement</span>
+          </button>
+        </div>
+      </section>
+
+      <article class="project project-color" data-space="create" aria-labelledby="project-plastic">
+        <div class="color-image reveal">
+          <button class="art-button" type="button" data-lightbox="./assets/recherches-plastiques.webp" data-caption-key="plasticCaption" aria-label="Agrandir les recherches plastiques" data-i18n-aria="openPlastic">
+            <img src="./assets/recherches-plastiques.webp" alt="Double page de recherches plastiques aux fils brodés roses et bleus, collages et couches d’aquarelle très colorées" data-alt="altPlastic" loading="lazy" />
+          </button>
+        </div>
+        <div class="color-copy reveal">
+          <p class="project-count">01</p>
+          <p class="project-meta" data-i18n="plasticMeta">Carnet · broderie · aquarelle · collage · 2019–2025</p>
+          <h3 id="project-plastic" data-i18n="plasticTitle">Corps, masques, transformations</h3>
+          <p data-i18n="plasticText">
+            Une recherche plastique autonome traversée par des visages, des formes organiques, des ouvertures
+            et des figures doubles. L’aquarelle se mêle au fil, à l’encre et au collage ; chaque reprise conserve
+            la trace des états antérieurs de l’image.
+          </p>
+          <p class="art-caption" data-i18n="plasticCaption">Recherches plastiques · techniques mixtes</p>
+        </div>
+      </article>
+
+      <section class="material-process section-shell" data-space="create" aria-labelledby="material-title">
+        <header class="material-heading reveal">
+          <p class="material-kicker" data-i18n="materialKicker">Gestes, surfaces, reprises</p>
+          <h3 id="material-title" data-i18n="materialTitle">Intervenir la matière</h3>
+          <p data-i18n="materialText">Ces œuvres naissent d’interventions successives : anverso et reverso, couches de marbrure, aquarelle, fil, collage, déchirure et recomposition. Chaque surface conserve les temps et les matériaux qui l’ont transformée.</p>
+        </header>
+
+        <div class="material-grid" aria-label="Trois œuvres par interventions matérielles" data-i18n-aria="materialGalleryLabel">
+          <button class="art-button material-card material-card-wide reveal" type="button" data-lightbox="./assets/hominids-marbling-diptych.webp" data-caption-key="hominidsCaption" aria-label="Agrandir le diptyque de primates" data-i18n-aria="openHominids">
+            <img src="./assets/hominids-marbling-diptych.webp" alt="Diptyque symétrique de primates imprimés et de couches roses, rouges et grises de marmoleo" data-alt="altHominids" loading="lazy" />
+            <span data-i18n="hominidsCaption">Anverso / reverso · intervention et marbrure</span>
+          </button>
+          <button class="art-button material-card material-card-vertical reveal" type="button" data-lightbox="./assets/watercolour-marbling.webp" data-caption-key="watercolourMarblingCaption" aria-label="Agrandir l’aquarelle et marbrure" data-i18n-aria="openWatercolourMarbling">
+            <img src="./assets/watercolour-marbling.webp" alt="Aquarelle abstraite à dominante jaune, bleue et rouge, traversée de lignes noires et de marbrure" data-alt="altWatercolourMarbling" loading="lazy" />
+            <span data-i18n="watercolourMarblingCaption">Aquarelle et marbrure</span>
+          </button>
+          <button class="art-button material-card material-card-wide reveal" type="button" data-lightbox="./assets/marine-figure-mixed-media.webp" data-caption-key="marineFigureCaption" aria-label="Agrandir la figure marine en techniques mixtes" data-i18n-aria="openMarineFigure">
+            <img src="./assets/marine-figure-mixed-media.webp" alt="Figure marine sur textile rouge et turquoise, composée de broderie, collage, aquarelle et fragments recomposés" data-alt="altMarineFigure" loading="lazy" />
+            <span data-i18n="marineFigureCaption">Figure marine · broderie, collage, aquarelle, déchirure et recomposition</span>
+          </button>
+        </div>
+      </section>
+
+      <aside class="sales-band section-shell" data-space="create" aria-labelledby="sales-title">
+        <div class="reveal">
+          <p class="contact-kicker" data-i18n="salesKicker">Œuvres originales · éditions · commandes</p>
+          <h3 id="sales-title" data-i18n="salesTitle">Œuvres originales et commandes.</h3>
+        </div>
+        <div class="sales-copy reveal">
+          <p data-i18n="salesText">
+            Pour une acquisition, indiquez le titre de l’œuvre qui vous intéresse. Je réponds directement
+            avec ses dimensions, sa disponibilité, son prix et les possibilités d’envoi. Je réalise également des commandes.
+          </p>
+          <a href="mailto:q.peter.p@gmail.com?subject=Oeuvre%20ou%20commande" data-i18n="salesCta">Demander disponibilité et prix ↗</a>
+        </div>
+      </aside>
+
+      <section class="method section-shell" id="methode" data-space="research" aria-labelledby="method-title">
+        <header class="section-heading section-heading-light reveal">
+          <p class="section-number">I.B</p>
+          <div>
+            <h2 id="method-title" data-i18n="methodTitle">Ce que la bande dessinée fait à l’enquête</h2>
+            <p data-i18n="methodIntro">
+              De cette trajectoire se dégagent quatre opérations. Elles ne forment pas une recette : elles
+              décrivent ce que le dessin a progressivement rendu possible dans mes enquêtes.
+            </p>
+          </div>
+        </header>
+
+        <div class="method-concept reveal">
+          <p class="method-concept-label" data-i18n="conceptLabel">Principe de travail</p>
+          <div>
+            <h3 data-i18n="conceptTitle">Dessiner ne vient pas après l’enquête.</h3>
+            <p data-i18n="conceptText">
+              Le dessin déplace l’attention, oblige à rendre visibles des choix d’interprétation et ouvre
+              la possibilité d’un retour. Une image peut être discutée, corrigée, refusée ou laissée ouverte.
+            </p>
+          </div>
+        </div>
+
+        <h3 class="method-subtitle reveal" data-i18n="methodProtocolTitle">Quatre opérations apprises en pratiquant</h3>
+
+        <ol class="method-list">
+          <li class="reveal"><span>01</span><div><h3 data-i18n="m1Title">Regarder autrement</h3><p data-i18n="m1Text">Dessiner pendant ou après une rencontre ralentit l’observation et déplace l’attention vers des gestes, des distances et des détails que la seule prise de notes peut laisser de côté.</p></div></li>
+          <li class="reveal"><span>02</span><div><h3 data-i18n="m2Title">Composer, donc interpréter</h3><p data-i18n="m2Text">Choisir une scène, un cadrage, une séquence ou un silence oblige à concrétiser ce que l’on croit avoir compris. Le montage expose ainsi les décisions du chercheur.</p></div></li>
+          <li class="reveal"><span>03</span><div><h3 data-i18n="m3Title">Renvoyer l’image</h3><p data-i18n="m3Text">Faire circuler la planche auprès des personnes rencontrées transforme l’interprétation en objet discutable. Elles peuvent la préciser, la déplacer, la refuser ou proposer une autre scène.</p></div></li>
+          <li class="reveal"><span>04</span><div><h3 data-i18n="m4Title">Conserver les versions</h3><p data-i18n="m4Text">Une correction ne remplace pas silencieusement l’état précédent. Les versions gardent la trajectoire de l’analyse et montrent comment une compréhension s’est transformée.</p></div></li>
+        </ol>
+
+        <section class="case-lessons" id="research-cases" aria-labelledby="case-lessons-title">
+          <div class="case-lessons-heading reveal">
+            <p class="section-number">I.C</p>
+            <div><p class="space-part" data-i18n="casesKicker">La méthode par les cas</p><h3 id="case-lessons-title" data-i18n="casesTitle">Ce sont les rencontres qui ont fait évoluer la méthode.</h3><p data-i18n="casesIntro">Chaque expérience a posé un problème différent. Ensemble, elles montrent une méthode en train de se construire plutôt qu’un protocole appliqué d’avance.</p></div>
+          </div>
+          <div class="case-grid">
+            <details class="case-card reveal"><summary><span>01</span><strong>Céline</strong></summary><p data-i18n="caseCeline">Une scène d’arrivée solitaire semblait graphiquement cohérente, mais elle était fausse. Sa correction a rendu visible mon interprétation et relancé l’enquête.</p></details>
+            <details class="case-card reveal"><summary><span>02</span><strong>Stéphanie</strong></summary><p data-i18n="caseStephanie">Le passage de l’entretien au dessin a permis de comprendre plus finement les positions, les émotions et les relations contenues dans son récit.</p></details>
+            <details class="case-card reveal"><summary><span>03</span><strong>Louise</strong></summary><p data-i18n="caseLouise">L’image a fait apparaître que la migration structurait davantage son expérience que le terrain formel que je pensais devoir représenter.</p></details>
+            <details class="case-card reveal"><summary><span>04</span><strong>Jeanne</strong></summary><p data-i18n="caseJeanne">Un livre brodé et un livre muet ont posé la question de la restitution : que peut-on transmettre sans refermer le sens à la place de l’autre ?</p></details>
+            <details class="case-card reveal"><summary><span>05</span><strong>Adrien</strong></summary><p data-i18n="caseAdrien">L’écart entre l’image produite et sa réponse n’a pas été un échec à effacer. Il a conduit à une nouvelle enquête et à une interprétation révisée.</p></details>
+          </div>
+        </section>
+
+        <details class="lineages reveal">
+          <summary class="lineages-heading">
+            <h3 data-i18n="lineagesTitle">Une généalogie graphique resserrée</h3>
+            <p data-i18n="lineagesIntro">Quatre rencontres intellectuelles et pratiques ont directement déplacé ma manière de faire de la bande dessinée en recherche.</p>
+          </summary>
+          <div class="lineages-grid">
+            <article><h4>Romain Dutter</h4><p data-i18n="lineage1Text">Ses ateliers à l’IHEAL m’ont appris à transformer une expérience de terrain en scènes, séquences et pages, sans réduire la bande dessinée à une illustration.</p></article>
+            <article><h4>Chalarka · Fals Borda · Rappaport</h4><p data-i18n="lineage2Text">Leurs expériences montrent que l’image peut participer à la production collective du savoir et à sa circulation, au lieu d’arriver seulement à la fin de la recherche.</p></article>
+            <article><h4>Pierre Nocérino</h4><p data-i18n="lineage3Text">Son travail aide à penser ce que le changement de médium transforme dans la posture du chercheur, l’écriture et les relations de l’enquête.</p></article>
+            <article><h4>Giada Peterle</h4><p data-i18n="lineage4Text">Elle propose de considérer la bande dessinée comme une pratique de recherche à part entière : une manière de penser par l’espace, la séquence et le montage.</p></article>
+          </div>
+        </details>
+      </section>
+
+      <section class="about section-shell" id="apropos" data-space="about" aria-labelledby="about-title">
+        <header class="section-heading reveal">
+          <p class="section-number">04</p>
+          <div><h2 id="about-title" data-i18n="aboutTitle">À propos</h2></div>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p class="about-lead" data-i18n="aboutLead">
+              Je suis anthropologue, artiste et chercheur colombien, basé à Paris.
+            </p>
+            <p data-i18n="aboutText">
+              Formé en Colombie, au Mexique et en France, je travaille au croisement de l’enquête qualitative,
+              de la narration graphique et de la production de savoirs sensibles. Mon parcours traverse
+              l’anthropologie, les sciences sociales et la recherche-création.
+            </p>
+            <p data-i18n="aboutCollective">
+              Je cofonde en 2025 La Galère, un collectif interuniversitaire qui développe des ateliers,
+              fanzines, expositions et restitutions dessinées en sciences sociales.
+            </p>
+          </div>
+
+          <ol class="timeline reveal">
+            <li><span>2025–2026</span><p data-i18n="edu1">Année préparatoire au doctorat · EHESS</p></li>
+            <li><span>2024–2025</span><p data-i18n="edu2">DIU ArTeC · Recherche-création · Université Paris 8</p></li>
+            <li><span>2022–2024</span><p data-i18n="edu3">Master 2 Sciences sociales, Anthropologie · IHEAL, Sorbonne Nouvelle</p></li>
+          </ol>
+        </div>
+
+        <a class="cv-link reveal" href="./assets/peter-castro-cv-2026.pdf" target="_blank" rel="noopener" data-i18n="cvDownload">Télécharger le CV · PDF ↗</a>
+
+      </section>
+
+      <aside class="contact-band about-contact section-shell reveal" data-space="about">
+        <div>
+          <p class="contact-kicker" data-i18n="contactKicker">Recherche · ateliers · édition · exposition</p>
+          <h3 data-i18n="contactTitle">Parlons d’un projet.</h3>
+        </div>
+        <a href="mailto:q.peter.p@gmail.com">q.peter.p@gmail.com <span aria-hidden="true">↗</span></a>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year">2026</span> Peter Castro</p>
+      <p data-i18n="footerRole">Dessin, enquête & recherche-création</p>
+      <a href="#home" data-route="home" data-i18n="backTop">Retour à l’index ↑</a>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Aperçu de l’œuvre" data-i18n-aria="lightboxLabel">
+      <button class="lightbox-close" type="button" aria-label="Fermer" data-i18n-aria="close">×</button>
+      <div class="lightbox-inner">
+        <img id="lightbox-image" src="" alt="" />
+        <p id="lightbox-caption"></p>
+      </div>
+    </dialog>
+  </body>
+</html>
